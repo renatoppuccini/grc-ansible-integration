@@ -53,9 +53,9 @@
           caller_id: "{{ snow_username }}"
           short_description: "ACM {{ policy_name }} VIOLATION"
           description:
-            "POLICY VIOLATION:\n{{ policy_name }} : one or more certificates are expiring soon in a secret in
-            \nNAMESPACE {{ target_namespace }} \nCLUSTERS:
-            {{ target_clusters | join(', ') }}"
+            "POLICY VIOLATION:\n*{{ policy_name }}* : one or more certificates are expiring soon in a secret in
+            \nNAMESPACE: *{{ target_namespace }}* \nCLUSTERS:
+            *{{ target_clusters | join(', ') }}*"
           priority: 2
           severity: 2
       environment:
