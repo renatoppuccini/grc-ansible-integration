@@ -42,7 +42,7 @@
       ansible.builtin.set_fact:
         ansible_python_interpreter: "{{ temp_dir.path }}/bin/python"
 
-    - name: Create a change request
+    - name: Create INCIDENT
       servicenow.servicenow.snow_record:
         state: present
         table: incident
